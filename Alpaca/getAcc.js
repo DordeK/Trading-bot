@@ -1,11 +1,9 @@
 const axios = require('axios');
 require('dotenv').config()
 
-
+// returna uporabnikov accout kot object, to kasneje uporabimo da izvrsimo trade
 const getAcc = async ()=>{
-
 let obj
-
 await axios({
     method: 'get',
     url:'https://paper-api.alpaca.markets/v2/account',
@@ -16,12 +14,7 @@ await axios({
   }).then(resArr =>{
      obj = resArr.data
   })
-
-
-
    return obj
-
-
 }
 
 

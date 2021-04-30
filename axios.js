@@ -12,22 +12,24 @@ const func = async () =>{
 
 let testData;
 
-await axios({
-  method: 'get',
-  url: 'https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/minute/2020-02-12/2021-02-12?unadjusted=true&sort=asc&limit=50000&apiKey=j6wu8zFIL2ZbAw4dZWxURDOhgSQh57DF',
-}).then((response)=>{
-    testData = response['data']['results']
-}, (error) => {
-    console.log(error.response.data);
-})
+// await axios({
+//   method: 'get',
+//   url: 'https://api.polygon.io/v2/aggs/ticker/' + process.env.STOCK + '/range/1/minute/2020-02-12/2021-02-12?unadjusted=true&sort=asc&limit=50000&apiKey=j6wu8zFIL2ZbAw4dZWxURDOhgSQh57DF',
+// }).then((response)=>{
+//     testData = response['data']['results']
+// }, (error) => {
+//     console.log(error.response.data);
+// })
 
-
+// myAccount == uporabnikov accout kot object, to kasneje uporabimo da izvrsimo trade
 let myAccount = await getAcc.getAcc();
+
+// preverimo ali je market odpret tradingHours = true | false
 let tradingHours = await getOpen.isOpen();
 
 
     async function callOrder(bar1, bar2){
-        console.log("TRADABL---> ",  ((bar1 && bar2) &&(bar1.c < bar1.o) &&(bar2.c > bar2.o) &&  (bar2.c > bar1.o) &&  (bar2.o < bar1.c) && (bar2.v > bar1.v)));
+        console.log("tradable---> ",  ((bar1 && bar2) &&(bar1.c < bar1.o) &&(bar2.c > bar2.o) &&  (bar2.c > bar1.o) &&  (bar2.o < bar1.c) && (bar2.v > bar1.v)));
 
         if((bar1 && bar2)   &&
           (bar1.c < bar1.o) &&
@@ -58,6 +60,6 @@ let tradingHours = await getOpen.isOpen();
 console.log("-------------------------------------------------------------------\n");
 }
 
-setInterval(func, 10000);
+setInterval(func, 1000);
 
     exports.func = func
