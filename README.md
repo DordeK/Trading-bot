@@ -25,5 +25,4 @@
 
 
 
-  ## Building this program i worked with a loat of api calls
-  ## Because of that i upgraded my knowladge of axios library api calls and async programing
+  ## Building this program i worked with a loat of api calls. Because of that i upgraded my knowladge of axios library api calls and async programing
