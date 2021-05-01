@@ -27,7 +27,7 @@
 	gif of program runing
 
 
-  <span style="color: green"> # Building this program i worked with a loat of api calls. Because of that i upgraded my knowladge of axios library api calls and async programing </span>
+!! # Building this program i worked with a loat of api calls. Because of that i upgraded my knowladge of axios library api calls and async programing
 
 	
 	
