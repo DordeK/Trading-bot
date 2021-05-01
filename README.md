@@ -1,9 +1,13 @@
 # Trading-bot
+ # This program is trading bot that checks price of stock-market every minute and decides if trade should be executed or not.
 
 
- #### This trading bot checks price of stock-market every minute and decides if trade should be executed,
 
- #### When certen conditions are met the trade is executed. Imidiately after trade is executed selling spot is choosen so when stock's price hits that spot the stock is traded. For now that spot is 10% below and 20% abow buying price
+ * When certen conditions are met the trade is executed.
+ 	* Imidiately after trade is executed selling spot is choosen,
+ 	* when stock's price hits that spot the stock is traded,
+ 	* selling spot is 10% below and 20% abow buying price,
+ 	* trades are executed through Alpaca api
 
 
 
@@ -18,15 +22,13 @@
 
 
 
- ### Trades are executed through Alpaca api, 
 
 
 	gif of program runing
 
 
+  <span style="color: green"> # Building this program i worked with a loat of api calls. Because of that i upgraded my knowladge of axios library api calls and async programing </span>
 
-
-  ## Building this program i worked with a loat of api calls. Because of that i upgraded my knowladge of axios library api calls and async programing
 	
 	
   * Starting program:
